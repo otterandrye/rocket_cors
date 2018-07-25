@@ -780,7 +780,7 @@ impl AllOrSome<HashSet<Url>> {
 pub struct Method(http::Method);
 
 impl FromStr for Method {
-    type Err = rocket::Error;
+    type Err = ();
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         let method = http::Method::from_str(s)?;
